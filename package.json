@@ -7,10 +7,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
+    "framer-motion": "latest",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "framer-motion": "latest",
-    "react-confetti": "latest"
+    "react-confetti": "latest",
+    "react-dom": "latest"
   }
 }
