@@ -79,7 +79,7 @@ export default function Home() {
   const [inviteDetails, setInviteDetails] = useState({ invitedBy: '', myScore: 0 });
 
   useEffect(() => {
-    let params = window.location.search.split('?')[1].split('&');
+    let params = window.location.search?.split('?')[1]?.split('&') || [];
     params = params.reduce((acc, param) => {
       const [key, value] = param.split('=');
       acc[key] = value;
