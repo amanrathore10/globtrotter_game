@@ -2032,10 +2032,25 @@ export default function handler(req, res) {
 
   let randomDestination = remainingDestinations[Math.floor(Math.random() * remainingDestinations.length)];
 
-  let startIndex = destinations.length > 4 ? Math.floor(Math.random() * destinations.length) : 0;
-  const options = destinations.slice(startIndex, startIndex + 4).map((destination) => destination.city);
-
-  randomDestination.options = options;
+ 
+  randomDestination.options = randomOptions(destinations,randomDestination.city);
 
   res.status(200).json(randomDestination);
+}
+
+const randomOptions = (destinations, city) => {
+  let totalDestinations = destinations.length;
+  let options = [];
+  let startIndex = Math.floor(Math.random() * (totalDestinations - 4));
+  destinations = destinations.slice(startIndex, startIndex + 4);
+  let randomIndex = Math.floor(Math.random() * 3);
+  for(let i = 0; i <= 3; i++) {
+    if(i === randomIndex) {
+      options.push(city);
+    } else {
+      console.log('___i___',i,destinations[i])
+      options.push(destinations[i]?.city);
+    }
+  }
+  return options
 }
