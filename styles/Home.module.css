@@ -5,6 +5,8 @@
   justify-content: center;
   min-height: 100vh;
   background-color: #f3f4f6;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: sans-serif ;
 }
 .title {
   font-size: 2.5rem;
@@ -17,11 +19,11 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 400px;
+  max-width: 600px;
 }
 .clue {
   margin-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .button {
   display: block;
@@ -33,6 +35,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-align: center;
 }
 .button:disabled {
   background-color: #ddd;
@@ -61,4 +64,67 @@
 .score {
   margin-top: 1rem;
   font-size: 1.25rem;
+}
+
+
+.progressBarContainer {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  margin-top: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.progressBar {
+  height: 20px;
+  background-color: #76c7c0;
+  border-radius: 25px;
+  transition: width 0.5s;
+}
+
+.errorButton,.errorButton:disabled{
+  background-color: red;
+}
+.successButton,.successButton:disabled{
+  background-color: lightgreen;
+}
+
+.factsWrapper{
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+}
+.inviteBox{
+  border: 1px solid gold;
+  padding: 16px;
+  max-width: 300px;
+}
+.challengerName{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding: 16px;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+.scoreBoard{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  background-color: #f3f4f6;
+  padding: 12px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
 }
